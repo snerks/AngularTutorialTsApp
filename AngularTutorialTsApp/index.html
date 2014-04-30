@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" data-ng-app="app1">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link type="text/css" href="css/app.css" rel="stylesheet" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/app/app.js"></script>
+</head>
+<body>
+    <h1>TypeScript HTML App</h1>
+
+    <div id="content"></div>
+
+    <noscript>NO SCRIPT !!</noscript>
+
+    <div data-ng-controller="personCtrl">
+        {{ greeting }}
+    </div>
+
+    <script src="Scripts/app/app1.js"></script>
+    <script src="Scripts/app/personCtrl.js"></script>
+</body>
+</html>

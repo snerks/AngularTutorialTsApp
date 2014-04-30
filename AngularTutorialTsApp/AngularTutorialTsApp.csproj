@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{2795DDBE-9D2F-42E9-94D5-60F85468DB9C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="css\app.css" />
+    <Content Include="css\jasmine.css" />
+    <Content Include="index.html" />
+    <TypeScriptCompile Include="scripts\app\sampleClass.ts" />
+    <Content Include="scripts\angular-mocks.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
+    <TypeScriptCompile Include="scripts\app\app1.ts" />
+    <TypeScriptCompile Include="scripts\app\personCtrl.ts" />
+    <Content Include="scripts\jasmine-html.js" />
+    <Content Include="scripts\jasmine.js" />
+    <TypeScriptCompile Include="scripts\test\unit\sampleClassSpec.ts" />
+    <TypeScriptCompile Include="scripts\test\unit\personCtrlSpec.ts" />
+    <Content Include="scripts\typings\angularjs\angular-animate.d.ts" />
+    <Content Include="scripts\typings\angularjs\angular-cookies.d.ts" />
+    <Content Include="scripts\typings\angularjs\angular-mocks.d.ts" />
+    <Content Include="scripts\typings\angularjs\angular-resource.d.ts" />
+    <Content Include="scripts\typings\angularjs\angular-route.d.ts" />
+    <Content Include="scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <Content Include="scripts\typings\angularjs\angular-scenario.d.ts" />
+    <Content Include="scripts\typings\angularjs\angular.d.ts" />
+    <Content Include="scripts\typings\jasmine\jasmine-1.3.d.ts" />
+    <Content Include="scripts\typings\jasmine\jasmine.d.ts" />
+    <Content Include="scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="scripts\app\app.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="Chutzpah.json" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>AngularTutorialTsApp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54151/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
