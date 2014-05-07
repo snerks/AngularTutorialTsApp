@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" data-ng-app="app1">
+<html lang="en" data-ng-app="phoneCatApp">
 <head>
     <meta charset="utf-8" />
     <title>TypeScript HTML App</title>
     <link type="text/css" href="css/app.css" rel="stylesheet" />
     <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/app/app.js"></script>
 </head>
 <body>
     <h1>TypeScript HTML App</h1>
@@ -15,11 +14,38 @@
 
     <noscript>NO SCRIPT !!</noscript>
 
-    <div data-ng-controller="personCtrl">
-        {{ greeting }}
+    <div data-ng-controller="phoneListCtrl">
+        <p>Total number of phones: {{ phones.length }}</p>
+        <p>Name: {{ name }}</p>
+
+        <table>
+            <tr><th>row number</th></tr>
+            <tr data-ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
+        </table>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <!--Sidebar content-->
+                    Search: <input data-ng-model="query">
+                </div>
+
+                <div class="col-md-10">
+                    <!--Body content-->
+                    <ul class="phones">
+                        <li data-ng-repeat="phone in phones | filter:query">
+                        {{phone.name}}
+                        <p>{{phone.snippet}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
-    <script src="Scripts/app/app1.js"></script>
-    <script src="Scripts/app/personCtrl.js"></script>
+    <script src="Scripts/app/phoneCatApp.js"></script>
+    <script src="Scripts/app/phoneListCtrl.js"></script>
 </body>
 </html>

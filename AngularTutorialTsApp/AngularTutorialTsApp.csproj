@@ -26,10 +26,13 @@
     <Content Include="scripts\angular.min.js" />
     <TypeScriptCompile Include="scripts\app\app1.ts" />
     <TypeScriptCompile Include="scripts\app\personCtrl.ts" />
+    <TypeScriptCompile Include="scripts\app\phoneListCtrl.ts" />
+    <TypeScriptCompile Include="scripts\app\phoneCatApp.ts" />
     <Content Include="scripts\jasmine-html.js" />
     <Content Include="scripts\jasmine.js" />
     <TypeScriptCompile Include="scripts\test\unit\sampleClassSpec.ts" />
     <TypeScriptCompile Include="scripts\test\unit\personCtrlSpec.ts" />
+    <TypeScriptCompile Include="scripts\test\unit\phoneListCtrlSpec.ts" />
     <Content Include="scripts\typings\angularjs\angular-animate.d.ts" />
     <Content Include="scripts\typings\angularjs\angular-cookies.d.ts" />
     <Content Include="scripts\typings\angularjs\angular-mocks.d.ts" />
